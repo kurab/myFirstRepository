@@ -35,6 +35,7 @@ c
 c
         do i=2,ni-1
          fn(i)=f(i)-(f(i+1)-f(i-1))*c*dt/2./dx
+         fn2(i)=f(i)-(f(i+1)-f(i-1))*c*dt/2./dx**2.0d0
         end do
 c
         do i=1,ni
