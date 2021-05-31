@@ -1,5 +1,5 @@
 c
-c    differential calculus Upwind Method
+c    differential calculus Central Method
 c
         parameter(nx=120)
         dimension f(nx),fn(nx)
@@ -33,8 +33,8 @@ c
          end do
         end if
 c
-        do i=2,ni
-         fn(i)=f(i)-c*(f(i)-f(i-1))*dt/dx
+        do i=2,ni-1
+         fn(i)=f(i)-(f(i+1)-f(i-1))*c*dt/2./dx
         end do
 c
         do i=1,ni
