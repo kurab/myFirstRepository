@@ -1,1 +1,3 @@
 # myFirstRepository
+
+これは初めてのリポジトリです。
